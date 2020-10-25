@@ -2,9 +2,9 @@ const express = require("express");
 const isAuthenticated = require("../middlewares/isAuthenticated");
 const cloudinary = require("cloudinary").v2;
 cloudinary.config({
-  cloud_name: "dt64ugeka",
-  api_key: "623752297424679",
-  api_secret: "2K2TOxV_pfhsnDrm3qPbwC2Q3fU",
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 const router = express.Router();
 
